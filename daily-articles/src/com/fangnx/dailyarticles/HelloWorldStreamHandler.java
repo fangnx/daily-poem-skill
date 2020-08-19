@@ -16,12 +16,12 @@ package com.fangnx.dailyarticles;
 import com.amazon.ask.Skill;
 import com.amazon.ask.Skills;
 import com.amazon.ask.SkillStreamHandler;
-import com.amazon.ask.helloworld.handlers.CancelandStopIntentHandler;
-import com.amazon.ask.helloworld.handlers.HelloWorldIntentHandler;
-import com.amazon.ask.helloworld.handlers.HelpIntentHandler;
-import com.amazon.ask.helloworld.handlers.SessionEndedRequestHandler;
-import com.amazon.ask.helloworld.handlers.LaunchRequestHandler;
-import com.amazon.ask.helloworld.handlers.FallbackIntentHandler;
+import com.fangnx.dailyarticles.handlers.CancelandStopIntentHandler;
+import com.fangnx.dailyarticles.handlers.HelloWorldIntentHandler;
+import com.fangnx.dailyarticles.handlers.HelpIntentHandler;
+import com.fangnx.dailyarticles.handlers.SessionEndedRequestHandler;
+import com.fangnx.dailyarticles.handlers.LaunchRequestHandler;
+import com.fangnx.dailyarticles.handlers.FallbackIntentHandler;
 
 public class HelloWorldStreamHandler extends SkillStreamHandler {
 
@@ -35,7 +35,7 @@ public class HelloWorldStreamHandler extends SkillStreamHandler {
                         new SessionEndedRequestHandler(),
                         new FallbackIntentHandler())
                 // Add your skill id below
-                //.withSkillId("")
+                .withSkillId("amzn1.ask.skill.5ecfe597-2703-4ba0-97d6-1674ddaba90f")
                 .build();
     }
 

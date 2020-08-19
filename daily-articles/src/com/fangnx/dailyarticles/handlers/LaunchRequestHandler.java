@@ -11,29 +11,31 @@
      the specific language governing permissions and limitations under the License.
 */
 
-package com.fangnx.dailyarticles;
+package com.fangnx.dailyarticles.handlers;
 
 import com.amazon.ask.dispatcher.request.handler.HandlerInput;
 import com.amazon.ask.dispatcher.request.handler.RequestHandler;
+import com.amazon.ask.model.LaunchRequest;
 import com.amazon.ask.model.Response;
 
 import java.util.Optional;
 
-import static com.amazon.ask.request.Predicates.intentName;
+import static com.amazon.ask.request.Predicates.requestType;
 
-public class HelloWorldIntentHandler implements RequestHandler {
+public class LaunchRequestHandler implements RequestHandler {
 
     @Override
     public boolean canHandle(HandlerInput input) {
-        return input.matches(intentName("HelloWorldIntent"));
+        return input.matches(requestType(LaunchRequest.class));
     }
 
     @Override
     public Optional<Response> handle(HandlerInput input) {
-        String speechText = "Hello world";
-       return input.getResponseBuilder()
+        String speechText = "Welcome to Daily Featured Articles, you can say hello";
+        return input.getResponseBuilder()
                 .withSpeech(speechText)
                 .withSimpleCard("HelloWorld", speechText)
+                .withReprompt(speechText)
                 .build();
     }
 
