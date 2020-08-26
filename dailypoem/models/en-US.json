@@ -1,0 +1,45 @@
+{
+  "languageModel": {
+    "intents": [
+      {
+        "name": "AMAZON.CancelIntent",
+        "samples": []
+      },
+      {
+        "name": "AMAZON.HelpIntent",
+        "samples": []
+      },
+      {
+        "name": "AMAZON.StopIntent",
+        "samples": []
+      },
+      {
+        "name": "HelloWorldIntent",
+        "samples": [
+          "say hello",
+          "say hello world",
+          "hello",
+          "say hi",
+          "say hi world",
+          "hi",
+          "how are you"
+        ],
+        "slots": []
+      },
+      {
+        "name": "GetRandomPoemIntent",
+        "samples": [
+          "random poem",
+          "a random poem",
+          "read random poem",
+          "read a random poem"
+        ]
+      },
+      {
+        "name": "AMAZON.FallbackIntent",
+        "samples": []
+      }
+    ],
+    "invocationName": "poem of the day"
+  }
+}
